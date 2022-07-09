@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.openshift.io/connects-to: django
+  name: nginx
+  labels:
+    app: sample-blog
+    app.kubernetes.io/part-of: sample-blog
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: image-registry.openshift-image-registry.svc:5000/sample-blog/nginx:latest 
+        ports:
+        - containerPort: 8080

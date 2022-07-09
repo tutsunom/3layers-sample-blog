@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django
+  annotations:
+    app.openshift.io/connects-to: '["mysql", "redis"]'
+  labels:
+    app: sample-blog
+    app.kubernetes.io/part-of: sample-blog
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: django
+  template:
+    metadata:
+      labels:
+        app: django
+    spec:
+      containers:
+      - name: django
+        image: image-registry.openshift-image-registry.svc:5000/sample-blog/django:latest 
+        ports:
+        - containerPort: 8000
+        env:
+          - name: MYSQL_USER
+            value: sampleblog
+          - name: MYSQL_PASSWORD
+            value: sampleblog
+          - name: MYSQL_DATABASE
+            value: sampleblog
+          - name: MYSQL_HOST
+            value: mysql
+          - name: MYSQL_PORT
+            value: "3306"
+          - name: REDIS_HOST
+            value: redis
+        imagePullPolicy: Always
