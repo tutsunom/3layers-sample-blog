@@ -18,10 +18,10 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: docker.io/mysql:8.0
-          #        args:
-          #        - --character-set-server=utf8mb4
-          #        - --collation-server=utf8mb4_unicode_ci
+        image: docker.io/mysql:5.7.37
+        args:
+        - --character-set-server=utf8mb4
+        - --collation-server=utf8mb4_unicode_ci
         ports:
         - containerPort: 3306
         env:
