@@ -19,7 +19,7 @@ spec:
     spec:
       initContainers:
       - name: init-connection
-        image: docker.io/mysql:8.0.28 
+        image: docker.io/mysql:8.0.26
         imagePullPolicy: IfNotPresent
         command: ["sh", "-c"]
         args:
