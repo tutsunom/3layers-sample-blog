@@ -6,7 +6,7 @@ metadata:
   name: nginx
   namespace: sample-blog
 spec:
-  host: sample-blog.apps.aws-cluster01.88d7.sandbox456.opentlc.com
+  host: sample-blog.${BASE_DOMAIN}
   port:
     targetPort: 8080
   to:

@@ -6,10 +6,10 @@ namespace: sample-blog
 images:
 - name: image-registry.openshift-image-registry.svc:5000/sample-blog/django 
   newName: image-registry.openshift-image-registry.svc:5000/sample-blog/django
-  newTag: latest
+  newTag: v0.1
 - name: image-registry.openshift-image-registry.svc:5000/sample-blog/nginx
   newName: image-registry.openshift-image-registry.svc:5000/sample-blog/nginx
-  newTag: latest
+  newTag: v0.1
 
 resources:
 - django-configmap.yaml
