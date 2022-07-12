@@ -53,4 +53,10 @@ spec:
           value: "3306"
         - name: REDIS_HOST
           value: redis
+        - name: BLOG_ADMIN_USER
+          value: admin
+        - name: BLOG_ADMIN_EMAIL
+          value: admin@sample.com
+        - name: BLOG_ADMIN_PASSWORD
+          value: admin
         imagePullPolicy: Always
