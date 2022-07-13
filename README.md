@@ -82,3 +82,16 @@ oc get route nginx -o jsonpath="{.status.ingress[0].host}"
 `Sample Blog`をクリックしてトップページに遷移すると、登録した記事を確認できます。
 
 ![blog](./images/top_posted.png)
+
+
+
+Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
+This work, "Sample Blog", is a derivative of "Django Girls Tutorial"  by [DjangoGirls](https://djangogirls.org/en/), used under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/).
+"Sample Blog" is licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) by skitamura7446.
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
