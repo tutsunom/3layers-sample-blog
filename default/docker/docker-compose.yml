@@ -24,12 +24,15 @@ services:
       MYSQL_HOST: mysql
       MYSQL_PORT: 3306
       REDIS_HOST: redis
+      BLOG_ADMIN_USER: admin
+      BLOG_ADMIN_EMAIL: admin@sample.com
+      BLOG_ADMIN_PASSWORD: admin
     container_name: django
     depends_on:
     - mysql
  
   mysql:
-    image: mysql:8.0
+    image: mysql:8.0.26
     environment:
       MYSQL_USER: sampleblog
       MYSQL_PASSWORD: sampleblog
@@ -40,6 +43,6 @@ services:
     - "3306:3306"
   
   redis:
-    image: redis:7.0
+    image: redis:6.0.8
     ports:
     - "6379:6379"
