@@ -30,7 +30,7 @@ NginxとDjangoのコンテナをビルドします。
 oc new-build --name=nginx --strategy=docker --binary
 oc start-build nginx --from-dir=./docker/nginx/
 oc new-build --name=django --strategy=docker --binary
-oc start-build nginx --from-dir=./docker/django/
+oc start-build django --from-dir=./docker/django/
 ```
 
 nginx-route.yamlを作成します。
