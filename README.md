@@ -22,7 +22,7 @@ cd sample-blog
 
 OpenShiftにログインしてProjectを作成します。
 ```
-oc project sample-blog
+oc new-project sample-blog
 ```
 
 NginxとDjangoのコンテナをビルドします。
