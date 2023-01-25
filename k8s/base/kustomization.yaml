@@ -27,4 +27,4 @@ resources:
 - redis-service.yaml
 - redis-statefulset.yaml
 - sample-blog-sa.yaml
-- network-policy.yaml
+#- network-policy.yaml
