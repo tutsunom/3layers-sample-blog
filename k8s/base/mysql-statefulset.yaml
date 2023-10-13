@@ -35,4 +35,11 @@ spec:
           limits:
             memory: "1Gi"
             cpu: "300m"
+          volumeMounts:
+            - name: mysql-vol
+              mountPath: /var/lib/mysql
       serviceAccountName: sample-blog
+      volumes:
+        - name: mysql-vol
+          persistentVolumeClaim:
+            claimName: mysql-vol
