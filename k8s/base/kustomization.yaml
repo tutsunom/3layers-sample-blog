@@ -17,6 +17,7 @@ resources:
 - django-secret.yaml
 - django-service.yaml
 - mysql-configmap.yaml
+- mysql-pvc.yaml
 - mysql-secret.yaml
 - mysql-service.yaml
 - mysql-statefulset.yaml
